@@ -25,18 +25,44 @@ Here, Qtt & Qt+1t+1 are present state & next state respectively. So, T flip-flop
 
  
 From the above characteristic table, we can directly write the next state equation as Q(t+1)=T′Q(t)+TQ(t)′ ⇒Q(t+1)=T⊕Q(t)
-
-**Procedure**
-
+```
+**Procedure**:
 /* write all the steps invloved */
-
+step 1: first go to qratus prime software
+step2: create folder and type the program
+step3:In the veriog you get RTL diagram
+step4:And the waveform diagram
+step 5:end the program 
+```
+```
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by:udhaya praksh v
+RegisterNumber:24901131
+module t_flipflop (
+    input clk,    // Clock signal
+    input reset,  // Active-high reset
+    input t,      // Toggle input
+    output reg q  // Output
+);
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            q <= 1'b0; // Reset output to 0
+        else if (t)
+            q <= ~q; // Toggle output
+    end
+endmodule
 */
+```
+**RTL LOGIC FOR FLIPFLOPS**:
 
-**RTL LOGIC FOR FLIPFLOPS**
+![de 9 o](https://github.com/user-attachments/assets/ee8052bb-c49e-4590-9607-0203046ff9bd)
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+**TIMING DIGRAMS FOR FLIP FLOPS**:
+![de 9 w](https://github.com/user-attachments/assets/10d889d6-a203-4807-a3a9-c37b2f6656ec)
 
-**RESULTS**
+
+
+**RESULTS**:
+Thus the T-fliop flop and truth table are verified
